@@ -22,3 +22,34 @@
 
     color: #140D91;
   }
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .textbox{
+    width: 1015px;
+    height: 65px;
+    left: 238px;
+    top: 195px;
+    
+    background: #F8F8F8;
+    border: 2px solid rgba(20, 13, 145, 0.4);
+    border-radius: 4px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+padding: 12px 20px;
+
+color: rgba(20, 13, 145, 0.4);
+  }
+
+  .textbox:focus
+{
+    border: 2px solid #140D91;
+    outline-offset: 0px;
+    outline: none;
+}
