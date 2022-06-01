@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body{
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .baslik{
+      width: 100%;
+      height: auto;
+    padding-top: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+
+    color: #140D91;
+  }
