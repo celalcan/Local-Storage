@@ -1,6 +1,7 @@
 const form= document.querySelector("#form");
 const text=document.querySelector("#text");
 const ust=document.querySelector("#ust");
+const todoList= document.querySelector(".list-group");
 eventListener();
 
 function eventListener(){
@@ -18,6 +19,7 @@ console.log("asdfasfasf");
     else{
         /* addTodoToUI(newText);
         addTodoToStorage(newText); */
+        addTodoToUI(newText);
         showAlert("","Todo başarıyla eklendi...");
     }
     
@@ -38,3 +40,22 @@ function showAlert(type,message) {
         alert.remove();
     },1000);
 }
+
+
+function addTodoToUI(newText) {
+    
+    //list Item oluşturma
+    const listItem = document.createElement("li");
+    
+    listItem.className="list-group-item";
+    
+    //Text Node Ekleme
+    
+    listItem.appendChild(document.createTextNode(newText));
+    
+    
+    //Tıdı List Item'ı ekeleme
+    
+    todoList.appendChild(listItem);
+    text.value="";
+    }
