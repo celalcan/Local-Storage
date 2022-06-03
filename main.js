@@ -2,6 +2,7 @@ const form= document.querySelector("#form");
 const text=document.querySelector("#text");
 const ust=document.querySelector("#ust");
 const todoList= document.querySelector(".list-group");
+const alertt=document.querySelector(".alert");
 eventListener();
 
 function eventListener(){
@@ -32,7 +33,7 @@ function showAlert(type,message) {
     const alert=document.createElement("div");
     alert.className='alert alert-'+type;
     alert.textContent=message;
-    ust.appendChild(alert);
+    alertt.appendChild(alert);
 
     //setTimeout
 
