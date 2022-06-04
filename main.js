@@ -3,12 +3,23 @@ const text=document.querySelector("#text");
 const ust=document.querySelector("#ust");
 const todoList= document.querySelector(".list-group");
 const alertt=document.querySelector(".alert");
+const silbutton=document.querySelector(".sil");
 eventListener();
  
 function eventListener(){
     form.addEventListener("submit",addTodo);
     document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
     todoList.addEventListener("click",deleteTodo);
+    silbutton.addEventListener("click",clearAllTodos);
+}
+
+function clearAllTodos() {
+    if (confirm("Tüünü silmek istediğinizden emin misiniz ?")){
+        while (todoList.firstElementChild != null){
+            todoList.removeChild(todoList.firstElementChild);
+        }
+        localStorage.removeItem("todos");
+    }
 }
 
 function deleteTodo(e){

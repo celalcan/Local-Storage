@@ -96,6 +96,7 @@ font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 1015px;
     height: auto;
     border: 2px solid rgba(20, 13, 145, 0.4);
@@ -109,6 +110,7 @@ ul{
 .list-group{
     width: 90%;
     margin:54px;
+    margin-bottom: 0px;
 }
 .list-group-item{
     display: flex;
@@ -137,4 +139,9 @@ color: rgba(20, 13, 145, 0.6);
 img{
    padding-right:22px;
    cursor: pointer;
+}
+
+.sil{
+    margin-bottom: 20px;
+     width: 300px;
 }
