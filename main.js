@@ -4,12 +4,19 @@ const ust=document.querySelector("#ust");
 const todoList= document.querySelector(".list-group");
 const alertt=document.querySelector(".alert");
 eventListener();
-
+ 
 function eventListener(){
     form.addEventListener("submit",addTodo);
+    document.addEventListener("DOMContentLoaded",loadAllTodosToUI)
     /* document.addEventListener("DOMContentLoaded",loadAllTodosToUI); */
 }
-
+function loadAllTodosToUI(){
+    let todos=getTodosFromStorage();
+    todos.forEach(function(todo){
+        console.log("todo");
+        addTodoToUI(todo)
+    })
+}
 function addTodo(e){
 console.log("asdfasfasf");
     const newText = text.value.trim();
@@ -18,9 +25,9 @@ console.log("asdfasfasf");
         showAlert("danger","Lütfen bir todo girin...");
     }
     else{
-        /* addTodoToUI(newText);
-        addTodoToStorage(newText); */
         addTodoToUI(newText);
+        addTodoToStorage(newText);
+        
         showAlert("","Todo başarıyla eklendi...");
     }
     
@@ -41,8 +48,23 @@ function showAlert(type,message) {
         alert.remove();
     },1000);
 }
+function getTodosFromStorage(){
+    let todos;
 
+    if(localStorage.getItem("todos")===null){
+        todos=[];
+    }
 
+    else{
+        todos=JSON.parse(localStorage.getItem("todos"));
+    }
+    return todos;
+}
+function addTodoToStorage(newText){
+    let todoss=getTodosFromStorage();
+    todoss.push(newText);
+    localStorage.setItem("todos",JSON.stringify(todoss));
+ }
 function addTodoToUI(newText) {
     
     //list Item oluşturma
