@@ -8,7 +8,6 @@ eventListener();
 function eventListener(){
     form.addEventListener("submit",addTodo);
     document.addEventListener("DOMContentLoaded",loadAllTodosToUI)
-    /* document.addEventListener("DOMContentLoaded",loadAllTodosToUI); */
 }
 function loadAllTodosToUI(){
     let todos=getTodosFromStorage();
@@ -69,9 +68,9 @@ function addTodoToUI(newText) {
     
     //list Item oluşturma
     const listItem = document.createElement("li");
-    
+    const icon = document.createElement("img");
     listItem.className="list-group-item";
-    
+    icon.src="./sil.svg";
     //Text Node Ekleme
     
     listItem.appendChild(document.createTextNode(newText));
@@ -80,5 +79,6 @@ function addTodoToUI(newText) {
     //Tıdı List Item'ı ekeleme
     
     todoList.appendChild(listItem);
+    listItem.appendChild(icon);
     text.value="";
     }
