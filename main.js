@@ -7,8 +7,28 @@ eventListener();
  
 function eventListener(){
     form.addEventListener("submit",addTodo);
-    document.addEventListener("DOMContentLoaded",loadAllTodosToUI)
+    document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
+    todoList.addEventListener("click",deleteTodo);
 }
+
+function deleteTodo(e){
+    if(e.target.className==="img"){
+        e.target.parentElement.remove();
+        deleteTodoFromStorage(e.target.parentElement.textContent);
+        showAlert("success","Todo başarıyla silindi...");
+    }
+}
+function deleteTodoFromStorage(deleteTodo) {
+    let todos=getTodosFromStorage();
+
+    todos.forEach(function(todo,index) {
+        if(todo===deleteTodo) {
+            todos.splice(index,1);
+        }
+    });
+    localStorage.setItem("todos",JSON.stringify(todos));
+}
+
 function loadAllTodosToUI(){
     let todos=getTodosFromStorage();
     todos.forEach(function(todo){
@@ -71,6 +91,7 @@ function addTodoToUI(newText) {
     const icon = document.createElement("img");
     listItem.className="list-group-item";
     icon.src="./sil.svg";
+    icon.className="img";
     //Text Node Ekleme
     
     listItem.appendChild(document.createTextNode(newText));
