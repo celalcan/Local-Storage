@@ -5,12 +5,15 @@ const todoList= document.querySelector(".list-group");
 const alertt=document.querySelector(".alert");
 const silbutton=document.querySelector(".sil");
 eventListener();
- 
+
 function eventListener(){
+    
+     
     form.addEventListener("submit",addTodo);
     document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
     todoList.addEventListener("click",deleteTodo);
     silbutton.addEventListener("click",clearAllTodos);
+    
 }
 
 function clearAllTodos() {
@@ -26,7 +29,7 @@ function deleteTodo(e){
     if(e.target.className==="img"){
         e.target.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.textContent);
-        showAlert("success","Todo başarıyla silindi...");
+        showAlert("success","Lütfen bir şey yazın..");
     }
 }
 function deleteTodoFromStorage(deleteTodo) {
@@ -52,13 +55,13 @@ console.log("asdfasfasf");
     const newText = text.value.trim();
     console.log(newText);
     if(newText===""){
-        showAlert("danger","Lütfen bir todo girin...");
+        showAlert("danger","Lütfen bir şey yazın..");
     }
     else{
         addTodoToUI(newText);
         addTodoToStorage(newText);
         
-        showAlert("","Todo başarıyla eklendi...");
+        showAlert("success","Text başarıyla eklendi...");
     }
     
    
@@ -68,7 +71,7 @@ console.log("asdfasfasf");
 
 function showAlert(type,message) {
     const alert=document.createElement("div");
-    alert.className='alert alert-'+type;
+    alert.className='alert-style type-'+type;
     alert.textContent=message;
     alertt.appendChild(alert);
 
