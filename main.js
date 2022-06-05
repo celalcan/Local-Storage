@@ -29,7 +29,7 @@ function deleteTodo(e){
     if(e.target.className==="img"){
         e.target.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.textContent);
-        showAlert("success","Lütfen bir şey yazın..");
+        showAlert("success","Text başarıyla silindi");
     }
 }
 function deleteTodoFromStorage(deleteTodo) {
