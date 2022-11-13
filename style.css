@@ -61,21 +61,21 @@ padding-bottom: 107px;
   
 }
 .alert-style{
-  width: 1015px;
-  height: 65px;
-   display: flex;
+    width: 1015px;
+    height: 65px;
+    display: flex;
     align-items: center;
     justify-content: center;
     
-border-radius: 4px;
+    border-radius: 4px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-/* identical to box height */
-margin-top:37px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    margin-top:37px;
 
 
 }
@@ -88,8 +88,8 @@ margin-top:37px;
 
 .type-success{
   background: #F5FAF4;
-border: 2px solid #AAD1AE;
-color: #162E16;
+  border: 2px solid #AAD1AE;
+  color: #162E16;
 }
   .textbox{
     width: 1015px;
@@ -99,12 +99,12 @@ color: #162E16;
     border: 2px solid rgba(20, 13, 145, 0.4);
     border-radius: 4px;
     font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 29px;
-/* identical to box height */
-padding: 12px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    padding: 12px 20px;
 
 color: rgba(20, 13, 145, 0.4);
   }
@@ -130,17 +130,17 @@ color: rgba(20, 13, 145, 0.4);
 .submit{
     background-color: #140D91;
     width: 250px;
-height: 72px;
-  border: none;
-  border-radius: 4px;
-  color: white;
- margin:0px auto;
-  text-decoration: none;
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-  cursor: pointer;
+    height: 72px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin:0px auto;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
   
 }
 
@@ -181,18 +181,18 @@ ul{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-height: 65px;
+    height: 65px;
 
-background: rgba(20, 13, 145, 0.4);
-border: 2px solid rgba(20, 13, 145, 0.4);
-border-radius: 4px;
+    background: rgba(20, 13, 145, 0.4);
+    border: 2px solid rgba(20, 13, 145, 0.4);
+    border-radius: 4px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-padding-left: 22px;
-margin-bottom: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    padding-left: 22px;
+    margin-bottom: 20px;
 
 /* identical to box height */
 
